@@ -13,5 +13,8 @@
         <li class="list-group-item border-0 px-0">
             <a href="{{ route('contact') }}" class="text-decoration-none text-dark">Contact</a>
         </li>
+        <li class="list-group-item border-0 px-0">
+            <a href="{{ route('products.create') }}" class="text-decoration-none text-dark">Ajouter un produit</a>
+        </li>
     </ul>
 </div>

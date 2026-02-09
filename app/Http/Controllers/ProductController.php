@@ -54,4 +54,20 @@ class ProductController extends Controller
 
         return view('products.show', compact('product'));
     }
+    public function create()
+    {
+        return view('products.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|min:3',
+            'price' => 'required|numeric|min:0',
+            'description' => 'required|string|min:10',
+        ]);
+
+        return back()->with('success', 'Produit ajouté avec succès !');
+    }
+
 }
